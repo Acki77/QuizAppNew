@@ -1,9 +1,9 @@
 @import "./global.css";
 
-@import "./components/bookmark/bookmark.css";
-@import "./components/card-list/card-list.css";
-@import "./components/card/card.css";
-@import "./components/header/header.css";
-@import "./components/navigation/navigation.css";
-@import "./components/profile/profile.css";
-@import "./components/counter-list/counter-list.css";
+@import "./css-files/bookmark.css";
+@import "./css-files/card-list.css";
+@import "./css-files/card.css";
+@import "./css-files/header/header.css";
+@import "./css-files/navigation.css";
+@import "./css-files/profile.css";
+@import "./css-files/counter-list.css";
