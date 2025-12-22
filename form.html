@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">New Questions</h1>
+    </header>
+    <main>
+      <form
+        class="new-card-form"
+        data-js="new-card-form"
+        aria-labelledby="new-card-form-title"
+      >
+        <h2 class="new-card-form__title" id="new-card-form-title">
+          Add a new card
+        </h2>
+        <div class="new-card-form__field">
+          <label for="poker-question-input"
+            >Bitte deine Frage hier eingeben:</label
+          >
+          <textarea
+            name="question"
+            id="poker-question-input"
+            rows="5"
+            required
+            aria-required="true"
+            placeholder="Type your Question here..."
+          ></textarea>
+        </div>
+        <div class="new-card-form__field">
+          <label for="poker-answer-input"
+            >Bitte deine Antwort hier eingeben:</label
+          >
+          <textarea
+            name="answer"
+            id="poker-answer-input"
+            rows="5"
+            required
+            aria-required="true"
+            placeholder="Type your Answer here..."
+          ></textarea>
+        </div>
+        <div class="new-card-form__field">
+          <label for="tag-input"
+            >Bitte hier das Tag eintragen, beginnend mit dem
+            Hashtagzeichen:</label
+          >
+          <input
+            type="text"
+            name="tag"
+            id="tag-input"
+            required
+            aria-required="true"
+            placeholder="e.g. #poker"
+          />
+        </div>
+        <button
+          type="submit"
+          class="new-card-form__submit-button"
+          aria-label="Create new quiz card"
+        >
+          Create card
+        </button>
+      </form>
+      <section class="card-container" data-js="card-container"></section>
+    </main>
+
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item--active">
+          <a
+            class="navigation__link"
+            href="index.html"
+            aria-label="go to home page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="bookmarks.html"
+            aria-label="go to bookmarks page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="profile.html"
+            aria-label="go to profile page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01m0-11C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script src="./form.js"></script>
+  </body>
+</html>

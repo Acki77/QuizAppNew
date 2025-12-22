@@ -3,7 +3,9 @@
 @import "./css-files/bookmark.css";
 @import "./css-files/card-list.css";
 @import "./css-files/card.css";
-@import "./css-files/header/header.css";
+@import "./css-files/header.css";
 @import "./css-files/navigation.css";
 @import "./css-files/profile.css";
 @import "./css-files/counter-list.css";
+@import "./css-files/form.css";
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css");

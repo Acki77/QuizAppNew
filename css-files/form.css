@@ -1,0 +1,14 @@
+.new-card-form {
+  position: fixed;
+  top: 110px;
+}
+.new-card-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.card-container {
+  position: relative;
+  top: 150px;
+}

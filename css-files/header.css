@@ -11,4 +11,6 @@
 
 .header__title {
   text-align: center;
+  color: chocolate;
+  background-color: aqua;
 }
