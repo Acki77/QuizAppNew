@@ -1,6 +1,6 @@
 .new-card-form {
-  position: fixed;
-  top: 110px;
+  width: 100%;
+  max-width: 400px;
 }
 .new-card-form__field {
   display: flex;
@@ -9,6 +9,9 @@
   margin-bottom: 16px;
 }
 .card-container {
-  position: relative;
-  top: 150px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }

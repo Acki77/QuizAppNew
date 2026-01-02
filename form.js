@@ -22,12 +22,49 @@ function createCard(cardData) {
   answer.classList.add("card__answer");
   answer.textContent = cardData.answer;
 
-  const tag = document.createElement("span");
-  tag.classList.add("card__tag");
-  tag.textContent = cardData.tag;
+  const tagList = document.createElement("ul");
+  tagList.classList.add("card__tag-list");
 
-  cardArticle.append(question, answer, tag);
+  const tagItem = document.createElement("li");
+  tagItem.classList.add("card__tag-list-item");
+  tagItem.textContent = cardData.tag;
+  tagList.append(tagItem);
 
-  const cardContainer = document.querySelector('[data-js="card-container"]');
-  cardContainer.append(cardArticle);
+  const button = document.createElement("button");
+  button.classList.add("card__button-answer");
+  button.type = "button";
+  button.textContent = "Show Answer";
+
+  // umschalten
+  button.addEventListener("click", () => {
+    answer.classList.toggle("card__answer--active");
+    button.textContent = answer.classList.contains("card__answer--active")
+      ? "Hide answer"
+      : "Show answer";
+  });
+
+  const bookmarkContainer = document.createElement("div");
+  bookmarkContainer.classList.add("card__button-bookmark");
+
+  const bookmarkButton = document.createElement("button");
+  bookmarkButton.classList.add("bookmark");
+  bookmarkButton.type = "button";
+  // moderne alternative zu setAttribute
+  //bookmarkButton.ariaLabel = "bookmark";
+  bookmarkButton.setAttribute("aria-label", "bookmark");
+  bookmarkButton.innerHTML = `
+  <svg class="bookmark__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+  </svg>`;
+  bookmarkButton.addEventListener("click", () => {
+    bookmarkButton.classList.toggle("bookmark--active");
+  });
+
+  cardArticle.append(question, button, answer, tagList, bookmarkContainer);
+
+  const cardListItem = document.createElement("li");
+  cardListItem.classList.add("card-list__item");
+  cardListItem.append(cardArticle);
+  const cardList = document.querySelector('[data-js="card-list"]');
+  cardList.append(cardListItem);
 }
