@@ -68,3 +68,23 @@ function createCard(cardData) {
   const cardList = document.querySelector('[data-js="card-list"]');
   cardList.append(cardListItem);
 }
+
+// Zeichenzähler
+const questionArea = document.querySelector("#poker-question-input");
+const questionCount = document.querySelector('[data-js="question-count"]');
+
+questionCount.textContent = `Noch ${questionArea.maxLength} Zeichen.`;
+
+questionArea.addEventListener("input", () => {
+  const remainingChar = questionArea.maxLength - questionArea.value.length;
+  questionCount.textContent = `Noch ${remainingChar} Zeichen.`;
+  questionCount.style.color = remainingChar < 10 ? "red" : "black";
+});
+const answerArea = document.querySelector("#poker-answer-input");
+const answerCount = document.querySelector('[data-js="answer-count"]');
+answerCount.textContent = `Noch ${answerArea.maxLength} Zeichen.`;
+answerArea.addEventListener("input", () => {
+  const remainingChar = answerArea.maxLength - answerArea.value.length;
+  answerCount.textContent = `Noch ${remainingChar} Zeichen.`;
+  answerCount.style.color = remainingChar < 10 ? "red" : "black";
+});

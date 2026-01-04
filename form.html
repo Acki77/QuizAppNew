@@ -28,10 +28,14 @@
             name="question"
             id="poker-question-input"
             rows="5"
+            minlength="10"
+            maxlength="20"
             required
             aria-required="true"
             placeholder="Type your Question here..."
           ></textarea>
+
+          <p data-js="question-count"></p>
         </div>
         <div class="new-card-form__field">
           <label for="poker-answer-input"
@@ -41,10 +45,13 @@
             name="answer"
             id="poker-answer-input"
             rows="5"
+            minlength="10"
+            maxlength="20"
             required
             aria-required="true"
             placeholder="Type your Answer here..."
           ></textarea>
+          <p data-js="answer-count"></p>
         </div>
         <div class="new-card-form__field">
           <label for="tag-input"
