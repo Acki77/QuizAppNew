@@ -60,7 +60,8 @@ function createCard(cardData) {
     bookmarkButton.classList.toggle("bookmark--active");
   });
 
-  cardArticle.append(question, button, answer, tagList, bookmarkContainer);
+  cardArticle.append(question, button, answer, tagList);
+  cardArticle.append(bookmarkContainer);
 
   const cardListItem = document.createElement("li");
   cardListItem.classList.add("card-list__item");
